@@ -1,0 +1,23 @@
+
+{{ partial "head.html" .}}
+	<nav class="navbar navbar-default" >
+		<a href="/">
+    ← Browse all reads
+    </a>
+	</nav>
+	<div>
+		<div class="container">
+			<div class="hero">
+				<img src="{{.Site.BaseURL}}{{ .Page.Params.thumbnail }}">
+				<h1>{{ .Title}}</h1>
+				<h2> {{ .Page.Params.subtitle }}</h2>
+				<p>{{ .Page.Params.author }}</p>
+				<p>{{ .Page.Params.description }}</p>
+			</div>
+			<div class="content">
+				{{ .Content }}
+			</div>
+		</div>
+	</div>
+   
+{{ partial "script.html" .}}

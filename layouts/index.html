@@ -1,0 +1,22 @@
+
+{{ partial "head.html" .}}
+
+<div class="container">
+	<h1>
+		What I’ve been reading
+	</h1>
+	<div class="grid">
+		{{ range .Pages }}
+      <div class="grid-box">
+      	<a href="{{ .Permalink }}">
+					<img src="{{.Params.thumbnail}}" />
+					<p class="box-title">{{ .Title }}</p>
+					<div class="bottom-line"></div>
+				</a>
+			</div>
+    {{ end }}
+	</div>
+</div>
+      
+      
+{{ partial "script.html" .}}
